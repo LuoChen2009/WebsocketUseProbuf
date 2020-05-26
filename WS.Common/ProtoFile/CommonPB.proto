@@ -1,0 +1,9 @@
+syntax="proto3";
+package WS.Common;
+
+//请求类型
+enum EnumRequestType{
+    None=0;  //无
+	QueryFillReq=1;  //查询成交记录
+	QueryOrderReq=2;  //查询委托单
+}

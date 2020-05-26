@@ -1,0 +1,23 @@
+syntax="proto3";
+package WS.Common;
+
+import "google/protobuf/any.proto";
+import "CommonPB.proto";
+
+//响应消息
+message RequestMessageAny {
+     EnumRequestType reqeustType =1; //请求消息类型
+     google.protobuf.Any RequestBody = 2; //请求体数据
+}
+
+//查询委托单
+message QueryAccountOrder{
+     string orderId=1; //委托单号
+	 string AccountId=2;  //利润中心id
+}
+
+//查询成交记录
+message QueryFill{
+   string FillId=1; //成交记录id
+   string AgentId=2; //资金账号
+}
